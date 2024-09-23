@@ -132,7 +132,7 @@ void log_reg(void) {
       {12, 13, 14, 15, 16, 17}
   };
 
-  double test_Y[2];
+  double test_Y[7];
 
   
   for(i = 0; i < test_n; ++i) {
