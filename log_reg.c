@@ -16,7 +16,7 @@ void LogReg_predict(LogReg*, int*, double*);
 void log_reg(void);
 
 void construct(LogReg *this, int N, int p) {
-    int i, j;
+    int j;
     this->N = N;
     this->p = p;
     this->W = (double *)malloc(sizeof(double) * p);
@@ -29,10 +29,8 @@ void construct(LogReg *this, int N, int p) {
     
 }
 
-
-
 void LogReg_train(LogReg *this, int *x, int y, double log_reg) {
-    int i, j;
+    int j;
     double y_hat;
     double err;
 
@@ -68,7 +66,7 @@ void LogReg_sigmoid(double* x) {
 }
 
 void LogReg_predict(LogReg *this, int *x, double *y) {
-    int i, j;
+    int j;
     *y = 0;
     for(j = 0; j < this->p; ++j) {
         *y += this->W[j] * x[j];
